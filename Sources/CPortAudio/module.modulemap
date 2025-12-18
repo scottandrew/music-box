@@ -1,0 +1,5 @@
+module CPortAudio [system] { 
+    header "/usr/include/portaudio.h"
+    link "portaudio"
+    export *
+}

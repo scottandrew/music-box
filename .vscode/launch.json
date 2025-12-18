@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:music-box}",
+            "name": "Debug music-box",
+            "target": "music-box",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug music-box"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:music-box}",
+            "name": "Release music-box",
+            "target": "music-box",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release music-box"
+        }
+    ]
+}
