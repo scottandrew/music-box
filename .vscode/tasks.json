@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "type": "swift",
+            "args": [
+                "build",
+            ],
+            "env": {},
+            "cwd": "/home/ubuntu/Sources/music-box",
+            "disableTaskQueue": true,
+            "group": "build",
+            "problemMatcher": [],
+            "label": "swift: Build Debug music-box",
+            "detail": "swift build"
+        },
+        {
+            "type": "swift",
+            "args": [
+                "build",
+                "--build-tests"
+            ],
+            "env": {},
+            "cwd": "/home/ubuntu/Sources/music-box",
+            "disableTaskQueue": true,
+            "group": "build",
+            "problemMatcher": [],
+            "label": "swift: Build All",
+            "detail": "swift build --build-tests"
+        }
+    ]
+}
