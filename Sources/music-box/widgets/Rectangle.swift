@@ -1,6 +1,6 @@
 import CLVGL
 
-class RecatangleTool { 
+class Recatangle {
     private var descriptor: lv_draw_rect_dsc_t = lv_draw_rect_dsc_t()
 
     init() { 

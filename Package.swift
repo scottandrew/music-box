@@ -6,7 +6,7 @@ import PackageDescription
 #if os(Linux)
 let SDLCFlags=["-I/usr/include/SDL2"]
 #else
-let SDLCFlags=["-I/usr/local/Cellar/sdl2/2.0.14_1/include/SDL2", "-I/opt/homebrew/include/SDL2"]
+let SDLCFlags=["-I/opt/homebrew/include"]
 #endif
 
 let package = Package(

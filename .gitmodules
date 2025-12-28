@@ -1,0 +1,3 @@
+[submodule "Sources/CLVGL/lvgl"]
+	path = Sources/CLVGL/lvgl
+	url = https://github.com/lvgl/lvgl.git
