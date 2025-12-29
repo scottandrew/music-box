@@ -1,0 +1,7 @@
+
+module CFFTW [system] {
+   // header "/usr/include/portaudio.h"
+    header "/opt/homebrew/include/fftw3.h"
+    link "fftw3"
+    export *
+}

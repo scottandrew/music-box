@@ -36,8 +36,12 @@ class Object {
     func setSize(width: Int, height: Int) { 
         lv_obj_set_size(lvObject, lv_coord_t(width), lv_coord_t(height))
     }
-
-    func center() { 
+    
+  func setPosition(x: Int, y: Int) {
+    lv_obj_set_pos(lvObject, lv_coord_t(x), lv_coord_t(y))
+  }
+  
+    func center() {
         lv_obj_center(lvObject)
     }
 

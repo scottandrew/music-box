@@ -11,7 +11,10 @@ let SDLCFlags=["-I/opt/homebrew/include"]
 
 let package = Package(
     name: "music-box",
+    platforms: [.macOS(.v26)],
     targets: [
+        .systemLibrary(name: "CPortAudio", pkgConfig: "portaudio", providers: [.brew(["portaudio"]), .apt(["portaudio19-dev"])]),
+        .systemLibrary(name: "CFFTW", pkgConfig: "fftw3", providers: [.brew(["fftw"]), .apt(["fftw3-dev"])]),
         .target(
             name: "CLVGL",
             dependencies: [],
@@ -20,35 +23,13 @@ let package = Package(
                       "lvgl/tests",
                       "lvgl/examples",
                       "lvgl/docs",
-                      "lv_drivers/docs",
                       "lvgl/CMakeLists.txt",
-                      "lvgl/src/misc/lv_misc.mk",
-                      "lvgl/librarly.json",
                       "lvgl/lvgl.mk",
                       "lvgl/component.mk",
                       "lvgl/README.md",
-                      "lvgl/src/extra/extra.mk",
-                      "lvgl/src/gpu/lv_gpu.mk",
-                      "lvgl/src/hal/lv_hal.mk",
-                      "main.txt",
-                      "lvgl/src/draw/lv_draw.mk",
-                      "lvgl/src/font/lv_font.mk",
-                      "lvgl/library.json",
                       "lvgl/library.properties",
                       "lvgl/LICENCE.txt",
-                      "lvgl/src/core/lv_core.mk",
-                      "lvgl/src/font/korean.ttf",
-                      "lvgl/src/widgets/lv_widgets.mk",
-                      "lvgl/src/extra/README.md",
                       "lvgl/zephyr/module.yml",
-                      "lv_drivers/LICENSE",
-                      "lv_drivers/README.md",
-                      "lv_drivers/gtkdrv/broadway.png",
-                      "lv_drivers/wayland/README.md",
-                      "lv_drivers/gtkdrv/README.md",
-                      "lv_drivers/lv_drivers.mk",
-                      "lv_drivers/CMakeLists.txt",
-                      "lv_drivers/library.json"
             ],
             cSettings: [
                         .headerSearchPath("lvgl/src/*"),
@@ -62,7 +43,7 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .executableTarget(
             name: "music-box",
-            dependencies: ["CLVGL"]
+            dependencies: ["CFFTW", "CPortAudio", "CLVGL"]
         ),
     ]
 )
