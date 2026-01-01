@@ -17,7 +17,6 @@ class Meter : DrawingCanvas {
 
         rectange.bgColor = Color.black
 
-
       rectange.draw(layer: layer, area: Area(width: Int32(floor(Float(lv_obj_get_width(lvObject)) * percentage)), height: lv_obj_get_height(lvObject)))
     }
 }

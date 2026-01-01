@@ -858,7 +858,7 @@
 /*====================
  * 3RD PARTS LIBRARIES
  *====================*/
-/* Documentation for libraries can be found here: https://docs.lvgl.io/master/libs/index.html . */
+/* Documentation for libraries can be found here: https://docs.lvgl.io /master/libs/index.html . */
 
 /* File system interfaces for common APIs */
 
